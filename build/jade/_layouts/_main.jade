@@ -1,0 +1,40 @@
+doctype html
+
+block conditional
+	include ../_partials/_conditional
+
+block vars
+- var bodyClasses = [];
+- var sitePrefix='darianr'
+- var siteTitle='darianr'
+
+head
+	meta(charset='utf-8')
+	meta(name='viewport', content='width=device-width, initial-scale=1.0, user-scalable=yes')
+	block title
+		title Darian R
+
+	block styles
+		link(rel='stylesheet', href='/_/css/styles.min.css')
+
+	block scripts
+		script(src='/_/js/scripts.min.js')
+		script(src="//use.typekit.net/fli3gap.js")
+		script.
+			try{Typekit.load();}catch(e){}
+			
+block beforeBody
+
+body(class= bodyClasses + ' #{sitePrefix}-#{sectionClass}' + ' page-#{pageClass}')
+
+	block nav
+		include ../_partials/_nav-main
+
+	block content
+	
+	block foot
+		include ../_partials/_footer
+	
+	block script
+//
+</html>

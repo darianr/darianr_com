@@ -1,11 +1,46 @@
-*{
-  box-sizing: border-box;
-}
+// Import app.less file
+@import "app";
 
+@font-heading: "hellenic-wide";
+@font-body: "proxima-nova";
+
+// Theme
+// @bra
 html,
 body{
-  background-color: #FEDCC8;
 }
+
+.page{
+	&-nav{
+		padding-top: 80px;
+	}
+	&-home{
+		background: url('@{img-path}/15391051365_f3ca835aa1_o.jpg');
+		background-size: cover;
+		background-position: center center;
+		background-attachment: fixed;
+	}
+}
+body {
+    width: 100%;
+    height: 100%;
+    font-family: @font-body, Helvetica,Arial,sans-serif;
+    color: @light;
+    background-color: @dark;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+	font-family: @font-heading;
+	a{
+		color: @primary;
+	}
+}
+
 
 .parallax {
   perspective: 100px;
