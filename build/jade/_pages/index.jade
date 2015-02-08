@@ -1,0 +1,46 @@
+extends ../_layouts/_main
+
+block vars
+	- pageClass='home'
+	- sectionClass='home'
+
+block beforeBody
+	-bodyClasses.push('page-nav')
+
+block content
+	body.push(data-spy="scroll", data-target=".navbar-fixed-top")
+	#container
+		include ../_partials/_nav-main
+		.bg-img
+		canvas#fireflies
+		//
+			section
+				header.intro
+					.intro-body
+						.container
+						.row
+							.col-md-8.col-md-offset-2
+								h1.brand-heading Darian
+								p.intro-text I'm a dude
+		include ../_partials/_footer
+
+block script
+	script
+		include ../../_/js/fireflies.js
+		
+	script.
+		$(document).ready(function(){ 
+			var c, p = $('.navbar');
+				$(document).on('mousemove',function() {        
+				$('body').removeClass('bored');
+				clearTimeout(c);
+				c= setTimeout(function(){
+					$('body').addClass('bored');
+				}, 5000);
+			});
+			
+			$('.bg-img').on('webkitAnimationEnd', function(e) {
+				$(this).addClass('visible');
+			});
+
+		});
