@@ -9264,10 +9264,11 @@ html {
 }
 footer {
   font-family: "omnes-pro";
-  font-weight: 200;
-  letter-spacing: 1.1em;
+  font-weight: 600;
+  letter-spacing: .5em;
   font-size: .7em;
   text-transform: uppercase;
+  color: rgba(245, 235, 214, 0.5);
 }
 .parallax {
   -webkit-perspective: 100px;
